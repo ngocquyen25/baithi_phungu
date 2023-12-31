@@ -1,0 +1,394 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+}
+body{
+    height: 5000px;
+}
+html{
+    font-size: 62.5%;
+}
+br{
+    display: none;
+}
+i{
+    margin: 0;
+}
+p{
+    margin: 0;
+    cursor: pointer;
+}
+
+.header{
+    padding-top: 18px;
+    background-color: white;
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding-left: 44px;
+    padding-right: 44px;
+}
+.banner{
+    margin: 0;
+    margin-top: 60px;
+}
+.banner img{
+    width: 100%;
+}
+.menu-list{
+    display: flex;
+}
+
+.dropdown-toggle{
+    font-size: 1.6rem;
+    cursor: pointer;
+    margin-right: 30px;
+    text-transform: uppercase;
+}
+
+.dropdown-toggle.active{
+    color: #a68259;
+}
+
+.dropdown-menu{
+    font-size: 1.2rem;
+}
+
+.infor{
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: 600;
+    align-items: center;
+    margin-left: 16px;
+    justify-content: flex-end;
+}
+.infor p:nth-child(2){
+    margin: 0 8px;
+}
+.product{
+    margin: 80px 0 100px 0;
+}
+.title{
+    text-align: center;
+    position: relative;
+    padding: 80px 0;
+    /* background-color: red; */
+    
+}
+.line{
+    height: 5px;
+    width: 40%;
+    background-color: #fba003;
+}
+
+.text{
+    background-color: white;
+    position: absolute;
+    bottom: 26%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 16px;
+}
+
+.card{
+    cursor: pointer;
+    border: none;
+    border-bottom: 1px solid black;
+    position: relative;
+}
+
+.card-img-top{
+    height: 360px;
+    max-height: 360px;
+}
+@keyframes buy{
+    from{
+        opacity: 0;
+        top: 0;
+
+    }
+    to{
+        opacity: 1;
+        top: 40%;
+        
+    }
+}
+.card:hover .buy-now{
+    animation: buy 0.8s ease-in-out forwards;
+    
+
+}
+.card-text{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.percent-sale{
+    background-color: #fba003;
+    padding: 4px 8px;
+    position: absolute;
+    right: -8px;
+    top: 12px;
+}
+.buy-now{
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 600;
+    position: absolute;
+    opacity: 0;
+}
+.price{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4px;
+    font-size: 1.2rem;
+}
+.price-start{
+    display: flex;
+    margin: 0;
+}
+.price-start{
+    font-weight: 700;
+}
+.sale-price{
+    color: #938b8b;
+    font-weight: 600;
+    text-decoration-line: line-through;
+    margin: 0;
+    display: flex;
+}
+.container-circle{
+    position: relative;
+}
+.circle{
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    top: 35%;
+    box-shadow: 0 0 5px #938b8b;
+    cursor: pointer;
+}
+
+.circle-left{
+    left: -36px;
+    display: flex;
+    justify-content: center;
+}
+
+.circle-right{
+    right: -36px;
+    display: flex;
+    justify-content: center;
+}
+
+.register{
+    background-color: #efeff4;
+    text-align: center;
+    padding: 40px 0 20px 0;
+    margin-top: 100px;
+    font-weight: 800;
+}
+.input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+.input input{
+    width: 300px;
+    height: 30px;
+    outline: none;
+    border: 1px solid silver;
+    padding-left: 4px;
+}
+
+.input button{
+    padding: 6px 22px;
+    border-radius: unset;
+}
+
+.social{
+    font-size: 2rem;
+}
+
+.fa-facebook{
+    color: blue;
+}
+
+.fa-square-instagram{
+    color: #e83349;
+    margin: 0 4px;
+}
+
+.fa-youtube{
+    color: #eb1111;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.1);
+    z-index: 2;
+    display: none;
+    opacity: 0;
+    animation: overlay ease 0.3s forwards;
+}
+@keyframes overlay{
+    to{
+        opacity: 1;
+    }
+}
+.modal{
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    width: 650px;
+    height: 500px;
+    max-width: 100vh;
+    position: fixed;
+    transform: translateY(-600px);
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 16px 40px 16px 16px;
+    opacity: 0;
+}
+.col-left{
+    width: 100%;
+    margin-right: 6px;
+}
+.col-left img{
+    width: 100%;
+    height: 90%;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.col-right{
+    font-size: 1.6rem;
+}
+.col-right--price{
+    margin: 14px 0;
+    font-weight: 700;
+    
+}
+.size{
+    display: flex;
+}
+
+.size p{
+    border: 1px solid silver;
+    padding: 6px;
+    margin-right: 8px;
+}
+
+.count{
+    display: flex;
+    margin-top: 28px;
+    align-items: center;
+}
+
+.count span{
+    border: 1px solid silver;
+    padding: 6px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border-top-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    margin-left: 4px;
+
+}
+.count span p{
+    padding: 12px;
+}
+.count p:first-child{
+    margin-right: 6px;
+    border: none;
+    
+}
+.count span p:nth-child(1){
+    border: 1px solid silver;
+    color: #fba003;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+    
+}
+
+.count span p:nth-child(3){
+    border: 1px solid silver;
+    color: #fba003;
+    border-top-left-radius:10px;
+    border-bottom-right-radius: 10px;
+    margin-left: 6px;
+}
+.buy-btn{
+    margin: 0;
+    margin-top: 22px;
+    padding: 6px 12px;
+    border: 1px solid silver;
+    max-width: 100px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius:10px;
+    cursor: pointer;
+}
+.close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@keyframes modal{
+    from {
+        transform: translateY(-600px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(40px);
+        opacity: 1;
+    }
+}
+.modal.active{
+    animation: modal ease-in 0.6s forwards;
+}
+
+@keyframes modalReverse {
+    from {
+        transform: translateY(40px);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-600px);
+        opacity: 0;
+    }
+}
+
+.modal.remove {
+    animation: modalReverse ease-out 0.6s forwards;
+}
+
+.size-item.active{
+    background-color: #fba003;
+}
+.alert{
+    display: none;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='dathang.css'>
+    <script  src="./app.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <title>Document</title>
+</head>
+<body>
+    
+        <form>
+            <div class='content'>
+                <div class="user">
+                    <div id='col_left'>
+                        <p id="font">Thông tin nhận hàng</p>
+                    </div>    
+                    <p id='đn'><i class='fa-solid fa-user'></i>Đăng nhập</p>
+                </div>
+                <input type=text placeholder='Email' name='txtMail'><br>
+                <input type=text placeholder='Họ và Tên' name='txtTen'><br>
+                <input type=text placeholder='Số Điện thoại' name='txtĐt'><br>
+                <input type=text placeholder='Ghi chú'>
+            </div>
+            <div class='content'>
+                <div id='col_left'>
+                    <h2 id='vc'>Vận Chuyển</h2> 
+                </div>
+                <div class='clear'></div>     
+                <div id='infor'><p>Vui lòng nhập thông tin giao  hàng</p></div>
+                <div class="pay">
+                    <h2>Thanh toán</h2>
+                    <div class="pay-list">
+                        <div class="pay_item">
+                            <input type="radio" name="pay" class="option"/>
+                            <div class="pay_item--text">Thanh toán qua ví điện tử</div>
+                            <img src="./images/Screenshot 2023-12-31 211158.png" class="pay_item--img"/>
+                        </div>
+                        <div class="pay_item">
+                            <input type="radio" name="pay" class="option"/>
+                            <div class="pay_item--text">Thanh toán qua ví điện tử</div>
+                            <img src="./images/Screenshot 2023-12-31 211158.png" class="pay_item--img"/>
+                        </div>
+                        <div class="pay_item">
+                            <input type="radio" name="pay" class="option"/>
+                            <div class="pay_item--text">Thanh toán qua ví điện tử</div>
+                            <img src="./images/Screenshot 2023-12-31 211158.png" class="pay_item--img"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class='content content--border'>
+                <h2 id="col_left " class="countProd">Đơn Hàng(1 Sản phẩm)</h2>  
+                <div class='clear'></div>
+                <div class="detail">
+                    <img class="detail-img" src="./images/pic2-3.jpeg" alt="hinh"/>
+                    <div class="decription">
+                        <div class="name">Đầm suông phối cổ sơ mi, túi ốp, viền gấu váy kẹp rua.</div>
+                        <div class="size">Size: S</div>
+                        <div class="sale">Khuyến mãi 50%, -1,999,500</div>
+                    </div>
+                    <div class="form-price">1,399,500đ</div>
+                </div> 
+                
+                <input id="sl" type="text" placeholder='Nhập mã giảm giá' name='txtSL'>
+                <input id="tt" type="button" value="Áp dụng" readonly><div class='clear'></div>
+                
+                <div class="money">
+                    <div class="sum-item--top">
+                            <p class="sum-item">Tạm tính</p>
+                            <p class="quantity">1.049.500</p>
+                    </div>
+                    <div class="sum-item--top">
+                            <p class="sum-item">Phí vận chuyển</p>
+                            <p class="quantitys">-</p>
+                    </div>
+                </div>
+                
+                <div class="sum">
+                    <p class="sum-item">Tổng cộng</p>
+                    <p class="quantity">1.049.500</p>
+                </div>
+                <div class='clear'></div>    
+                <div class="action">
+                    <p id="back"><a href="./index.html">Quay về giỏ  hàng</a></p>
+                    <input id="tt" type="submit" value="Đặt hàng">
+                </div>
+            </div>  
+        </form>
+</body>
+</html>
